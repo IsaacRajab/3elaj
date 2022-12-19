@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">3elaj</string>
     <string name="elaj">elaj</string>
+    <string name="image1">image1</string>
+    <string name="image2">image2</string>
+    <string name="_3eelaj">3eelaj</string>
+    <string name="textview">The search for a cure for
+ the disease has become easier
+    </string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+
 </resources>
