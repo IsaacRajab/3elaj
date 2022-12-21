@@ -3,9 +3,9 @@ package com.example.a3elaj;
 public class RecyclerData {
     private String product;
     private int imgid;
-    private double  amount;
+    private String  amount;
 
-    public RecyclerData(String title, int imgid, double amount) {
+    public RecyclerData(String title, int imgid, String amount) {
         this.product = title;
         this.imgid = imgid;
         this.amount = amount;
@@ -27,11 +27,11 @@ public class RecyclerData {
         this.imgid = imgid;
     }
 
-    public double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 }
