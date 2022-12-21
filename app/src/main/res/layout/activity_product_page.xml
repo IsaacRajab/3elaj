@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProductPage">
+
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="0dp"
+        android:layout_height="290sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="21dp"
+        android:text="Product Name"
+
+        android:textSize="20sp"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <TextView
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="28dp"
+        android:text="100$"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <TextView
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTag"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTag" />
+
+    <TextView
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/descriptionTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="55dp"
+        android:text="Description:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <TextView
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/amountTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="218dp"
+        android:text="AMOUNT"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/plus"
+        android:text="add"
+        android:textSize="0sp"
+        app:backgroundTint="#3C3434"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintBottom_toBottomOf="@+id/delete"
+        app:layout_constraintStart_toEndOf="@+id/amountTag"
+        app:layout_constraintTop_toTopOf="@+id/delete"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="10"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amountTag"
+        app:layout_constraintStart_toEndOf="@+id/add" />
+
+    <Button
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/delete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/minus"
+        android:text="add"
+        android:textSize="0sp"
+        app:backgroundTint="#3C3434"
+        app:layout_constraintBottom_toBottomOf="@+id/amount"
+        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintTop_toTopOf="@+id/amountTag" />
+
+    <Button
+        app:fontFamily="@font/montserrat"
+        android:id="@+id/addToCart"
+        android:layout_width="0dp"
+        android:layout_height="68sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/cart"
+        android:text="add"
+        android:textSize="0sp"
+        app:backgroundTint="#84D7DD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
