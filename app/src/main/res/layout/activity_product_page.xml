@@ -66,14 +66,14 @@
         app:layout_constraintTop_toBottomOf="@+id/productName" />
 
     <TextView
-        app:fontFamily="@font/montserrat"
         android:id="@+id/amountTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="218dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="180dp"
         android:text="AMOUNT"
         android:textSize="20sp"
+        app:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -81,7 +81,7 @@
         android:id="@+id/add"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/plus"
         android:text="add"
         android:textSize="0sp"
@@ -90,7 +90,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/delete"
         app:layout_constraintStart_toEndOf="@+id/amountTag"
         app:layout_constraintTop_toTopOf="@+id/delete"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/amount"
@@ -104,20 +104,21 @@
         app:layout_constraintStart_toEndOf="@+id/add" />
 
     <Button
-        app:fontFamily="@font/montserrat"
         android:id="@+id/delete"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/minus"
         android:text="add"
         android:textSize="0sp"
         app:backgroundTint="#3C3434"
+        app:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="@+id/amount"
         app:layout_constraintStart_toEndOf="@+id/amount"
-        app:layout_constraintTop_toTopOf="@+id/amountTag" />
+        app:layout_constraintTop_toTopOf="@+id/amountTag"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         app:fontFamily="@font/montserrat"
