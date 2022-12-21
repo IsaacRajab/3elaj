@@ -93,13 +93,13 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        app:fontFamily="@font/montserrat"
         android:id="@+id/amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="44dp"
         android:text="10"
         android:textSize="30sp"
+        app:fontFamily="@font/montserrat"
         app:layout_constraintBaseline_toBaselineOf="@+id/amountTag"
         app:layout_constraintStart_toEndOf="@+id/add" />
 
