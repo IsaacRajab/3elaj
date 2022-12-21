@@ -34,6 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         RecyclerData recyclerData = productDataArrayList.get(position);
         holder.productName.setText(recyclerData.getProduct());
         holder.imgProduct.setImageResource(recyclerData.getImgid());
+        holder.ProductPrice.setText(recyclerData.getAmount());
     }
 
     @Override
@@ -47,11 +48,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private TextView productName;
         private ImageView imgProduct;
-
+        private TextView ProductPrice;
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
             productName = itemView.findViewById(R.id.productName);
             imgProduct = itemView.findViewById(R.id.productImg);
+            ProductPrice= itemView.findViewById(R.id.productPrice);
         }
     }
 }
