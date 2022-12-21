@@ -9,5 +9,6 @@
     </string>
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
+    <string name="doctor">doctor</string>
 
 </resources>

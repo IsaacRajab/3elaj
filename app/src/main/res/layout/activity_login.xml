@@ -17,49 +17,49 @@
 
     <EditText
         android:id="@+id/username"
-        android:drawableStart="@drawable/email"
         android:layout_width="322dp"
         android:layout_height="62dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
+        android:drawableStart="@drawable/email"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:fontFamily="@font/montserrat_semibold"
         android:hint="email/username"
-        android:textAlignment="center"
-        android:fontFamily="@font/montserrat_semibold"/>
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/password"
-        android:drawableStart="@drawable/lock"
         android:layout_width="322dp"
         android:layout_height="62dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/lock"
         android:ems="10"
+        android:fontFamily="@font/montserrat_semibold"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textAlignment="center"
-        android:fontFamily="@font/montserrat_semibold"
-        />
+        android:textAlignment="center" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/logIN"
         android:layout_width="322dp"
         android:layout_height="62dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:text="d"
-        android:textSize="0dp"
-        android:background="@drawable/button"/>
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/login"
+        android:textColor="#009688"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/or"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        />
+        app:srcCompat="@drawable/or" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -67,8 +67,7 @@
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/social"
-        />
+        app:srcCompat="@drawable/social" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
