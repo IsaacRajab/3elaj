@@ -59,7 +59,7 @@ public class login extends AppCompatActivity {
                 //everything checked we open new activity
                 Intent i = new Intent(login.this, home.class);
                 startActivity(i);
-                this.finish();
+
             } else {
                 Toast t = Toast.makeText(this, "Wrong email or password!", Toast.LENGTH_SHORT);
                 t.show();

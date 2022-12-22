@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        android:text="Choose Payment type"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/holderName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794"
+        tools:layout_editor_absoluteX="0dp">
+
+        <RadioButton
+            android:id="@+id/receive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:text="Pay when receive" />
+
+        <RadioButton
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:text="Card Payment" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/holderName"
+        android:layout_width="300sp"
+        android:layout_height="57sp"
+        android:layout_gravity="center"
+        android:layout_margin="10sp"
+        android:background="@drawable/rec"
+        android:gravity="center"
+        android:hint="Holder name"
+        app:layout_constraintBottom_toTopOf="@+id/cardNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <EditText
+        android:id="@+id/cardNumber"
+        android:layout_width="300sp"
+        android:layout_height="57sp"
+        android:layout_gravity="center"
+        android:layout_margin="10sp"
+        android:background="@drawable/rec"
+        android:gravity="center"
+        android:hint="Card Number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/month"
+        android:layout_width="74sp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10sp"
+        android:background="@drawable/smallrec"
+        android:gravity="center"
+        android:hint="MM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <EditText
+        android:id="@+id/year"
+        android:layout_width="74sp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10sp"
+        android:background="@drawable/smallrec"
+        android:gravity="center"
+        android:hint="YY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <EditText
+        android:id="@+id/cvv"
+        android:layout_width="74sp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10sp"
+        android:background="@drawable/smallrec"
+        android:gravity="center"
+        android:hint="CVV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300sp"
+        android:layout_height="63dp"
+        android:text="Process"
+        android:textSize="20sp"
+        app:backgroundTint="#84D7DD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
