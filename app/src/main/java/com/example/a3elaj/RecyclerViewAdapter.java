@@ -6,16 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder> {
 
-    private ArrayList<RecyclerData> productDataArrayList;
+    private ArrayList<Product> productDataArrayList;
     private Context mcontext;
+    public View view;
 
-    public RecyclerViewAdapter(ArrayList<RecyclerData> recyclerDataArrayList, Context mcontext) {
+    public RecyclerViewAdapter(ArrayList<Product> recyclerDataArrayList, Context mcontext) {
         this.productDataArrayList = recyclerDataArrayList;
         this.mcontext = mcontext;
     }
@@ -31,16 +34,29 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewHolder holder, int position) {
         // Set the data to textview and imageview.
-        RecyclerData recyclerData = productDataArrayList.get(position);
+        Product recyclerData = productDataArrayList.get(position);
         holder.productName.setText(recyclerData.getProduct());
         holder.imgProduct.setImageResource(recyclerData.getImgid());
         holder.ProductPrice.setText(recyclerData.getAmount());
+
     }
 
     @Override
     public int getItemCount() {
         // this method returns the size of recyclerview
         return productDataArrayList.size();
+    }
+
+
+
+    public void ViewHolder(View v) {
+        view = v;
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                Toast.makeText(mcontext.getApplicationContext(), "ssss", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     // View Holder Class to handle Recycler View.

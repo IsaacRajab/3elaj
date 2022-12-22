@@ -1,15 +1,17 @@
 package com.example.a3elaj;
 
-public class RecyclerData {
+public class Product {
     private String product;
     private int imgid;
     private String  amount;
 
-    public RecyclerData(String title, int imgid, String amount) {
+    public Product(String title, int imgid, String amount) {
         this.product = title;
         this.imgid = imgid;
         this.amount = amount;
     }
+
+
 
     public String getProduct() {
         return product;

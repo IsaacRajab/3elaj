@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment">
+    tools:context=".Payment">
 
     <TextView
         android:id="@+id/textView6"
@@ -125,7 +125,6 @@
         android:id="@+id/button"
         android:layout_width="300sp"
         android:layout_height="63dp"
-        android:margin="20sp"
         android:text="Process"
         android:textSize="20sp"
         app:backgroundTint="#84D7DD"

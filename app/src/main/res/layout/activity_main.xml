@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#04ACB9"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".LunchScreen">
 
 
     <FrameLayout

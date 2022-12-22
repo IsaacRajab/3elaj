@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     EditText username;
     EditText password;
     Button logIn;
@@ -55,9 +55,9 @@ public class login extends AppCompatActivity {
         if (isValid) {
             String usernameValue = username.getText().toString();
             String passwordValue = password.getText().toString();
-            if (usernameValue.equals("project@project.com") && passwordValue.equals("12345")) {
+            if (usernameValue.equals("p@p.com") && passwordValue.equals("12345")) {
                 //everything checked we open new activity
-                Intent i = new Intent(login.this, home.class);
+                Intent i = new Intent(Login.this, HomePage.class);
                 startActivity(i);
                 this.finish();
             } else {

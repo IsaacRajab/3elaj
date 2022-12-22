@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/productImage"
+        android:id="@+id/pImgSingl"
         android:layout_width="0dp"
         android:layout_height="290sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/productName"
+        android:id="@+id/pNameSingl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -27,11 +27,11 @@
         android:textSize="20sp"
         app:fontFamily="@font/montserrat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+        app:layout_constraintTop_toBottomOf="@+id/pImgSingl" />
 
     <TextView
         app:fontFamily="@font/montserrat"
-        android:id="@+id/productPrice"
+        android:id="@+id/pPriceSingl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -39,49 +39,65 @@
         android:text="100$"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+        app:layout_constraintTop_toBottomOf="@+id/pImgSingl" />
 
     <TextView
         app:fontFamily="@font/montserrat"
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
+        android:id="@+id/pDetailsSingl"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
         android:layout_marginTop="11dp"
+        android:paddingHorizontal="10dp"
         android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/descriptionTag"
         app:layout_constraintTop_toBottomOf="@+id/descriptionTag" />
 
     <TextView
+
         app:fontFamily="@font/montserrat"
+        android:id="@+id/pQuantitySingle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:paddingHorizontal="10dp"
+        android:text="20"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/descriptionTag"
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+
+    <TextView
         android:id="@+id/descriptionTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:text="Description:"
         android:textSize="20sp"
+        app:fontFamily="@font/montserrat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productName" />
+        app:layout_constraintTop_toBottomOf="@+id/pNameSingl" />
 
     <TextView
         android:id="@+id/amountTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="180dp"
-        android:text="AMOUNT"
+        android:layout_marginBottom="244dp"
+        android:text="Quantity"
         android:textSize="20sp"
         app:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/addToCartSingle"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/plus"
         android:text="add"
         android:textSize="0sp"
@@ -93,7 +109,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/amount"
+        android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -101,7 +117,7 @@
         android:textSize="30sp"
         app:fontFamily="@font/montserrat"
         app:layout_constraintBaseline_toBaselineOf="@+id/amountTag"
-        app:layout_constraintStart_toEndOf="@+id/add" />
+        app:layout_constraintStart_toEndOf="@+id/addToCartSingle" />
 
     <Button
         android:id="@+id/delete"
@@ -115,13 +131,12 @@
         android:textSize="0sp"
         app:backgroundTint="#3C3434"
         app:fontFamily="@font/montserrat"
-        app:layout_constraintBottom_toBottomOf="@+id/amount"
-        app:layout_constraintStart_toEndOf="@+id/amount"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity"
+        app:layout_constraintStart_toEndOf="@+id/quantity"
         app:layout_constraintTop_toTopOf="@+id/amountTag"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        app:fontFamily="@font/montserrat"
         android:id="@+id/addToCart"
         android:layout_width="0dp"
         android:layout_height="68sp"
@@ -133,9 +148,12 @@
         android:text="add"
         android:textSize="0sp"
         app:backgroundTint="#84D7DD"
+        app:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/add" />
+        app:layout_constraintTop_toTopOf="@+id/addToCartSingle"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
