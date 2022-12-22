@@ -1,6 +1,7 @@
 package com.example.a3elaj;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -14,11 +15,13 @@ public class login extends AppCompatActivity {
     EditText username;
     EditText password;
     Button logIn;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupIU();
+        sharedPreferences = getSharedPreferences("userSRF",MODE_PRIVATE);
         logIn.setOnClickListener(v -> checkUsername());
     }
     private void setupIU(){
@@ -55,8 +58,14 @@ public class login extends AppCompatActivity {
         if (isValid) {
             String usernameValue = username.getText().toString();
             String passwordValue = password.getText().toString();
+            SharedPreferences.Editor myedit = sharedPreferences.edit();
+            myedit.putString("username",usernameValue);
+            myedit.putString("password",passwordValue);
+            myedit.commit();
+
             if (usernameValue.equals("project@project.com") && passwordValue.equals("12345")) {
                 //everything checked we open new activity
+
                 Intent i = new Intent(login.this, home.class);
                 startActivity(i);
 
