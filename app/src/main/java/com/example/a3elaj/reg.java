@@ -15,7 +15,9 @@ public class reg extends AppCompatActivity {
     EditText email;
     EditText pass;
     Button register;
-
+    UsersData users[]=new UsersData[20];
+    int counter=0;
+    boolean value=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,16 +40,30 @@ public class reg extends AppCompatActivity {
      void checkDataEntered() {
         if(isEmpty(username)){
             Toast t =Toast.makeText(this,"you must Enter username to register!",Toast.LENGTH_SHORT);
+            value=false;
             t.show();
         }
         if(isEmpty(name)){
             name.setError("name is required");
+            value=false;
             }
         if(!isEmail(email)){
             email.setError("Enter Valid Email");
+            value=false;
         }
         if(pass.getText().toString().length()<4){
             pass.setError("password must be at least 4 char !");
+            value=false;
+        }
+        if(value) {
+            users[counter] = new UsersData(toString(name), toString(email), toString(username), toString(pass));
+            counter++;
         }
     }
+    public String toString(EditText s){
+        return s.getText().toString();
+
+    }
+
+
 }

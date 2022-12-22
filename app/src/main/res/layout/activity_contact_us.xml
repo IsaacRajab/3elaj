@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContactUS">
+
+    <TextView
+        android:id="@+id/cUName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2pt"
+        android:layout_gravity="center"
+        android:layout_marginTop="20pt"
+        android:layout_marginBottom="25pt"
+        android:fontFamily="@font/montserrat"
+        android:text="Contact Us"
+        android:textColor="@color/black"
+        android:textSize="18pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cUEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2pt"
+        android:layout_marginLeft="8pt"
+        android:layout_marginBottom="3pt"
+        android:fontFamily="@font/montserrat"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="7pt"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/cUEmailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2pt"
+        android:text="info@3elaaj.com"
+        android:layout_marginLeft="8pt"
+        android:layout_marginBottom="10pt"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/cUPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2pt"
+        android:text="Phone Number:"
+        android:layout_marginLeft="8pt"
+        android:layout_marginBottom="3pt"
+        android:fontFamily="@font/montserrat"
+        android:textSize="7pt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/cUPhoneValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2pt"
+
+        android:text="0568124568"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginLeft="8pt"
+        android:layout_marginBottom="10pt"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/cULocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2pt"
+        android:layout_marginLeft="8pt"
+        android:layout_marginBottom="3pt"
+        android:fontFamily="@font/montserrat"
+        android:text="Location:"
+        android:textColor="@color/black"
+        android:textSize="7pt"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cULocationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ramallah - Rukab Street"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginLeft="8pt"
+        android:layout_marginBottom="10pt"
+        android:textColor="@color/black"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

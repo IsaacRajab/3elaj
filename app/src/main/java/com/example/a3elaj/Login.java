@@ -1,6 +1,7 @@
 package com.example.a3elaj;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -10,15 +11,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Login extends AppCompatActivity {
+public class login extends AppCompatActivity {
     EditText username;
     EditText password;
     Button logIn;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupIU();
+        sharedPreferences = getSharedPreferences("userSRF",MODE_PRIVATE);
         logIn.setOnClickListener(v -> checkUsername());
     }
     private void setupIU(){
@@ -55,11 +58,17 @@ public class Login extends AppCompatActivity {
         if (isValid) {
             String usernameValue = username.getText().toString();
             String passwordValue = password.getText().toString();
-            if (usernameValue.equals("p@p.com") && passwordValue.equals("12345")) {
+            SharedPreferences.Editor myedit = sharedPreferences.edit();
+            myedit.putString("username",usernameValue);
+            myedit.putString("password",passwordValue);
+            myedit.commit();
+
+            if (usernameValue.equals("project@project.com") && passwordValue.equals("12345")) {
                 //everything checked we open new activity
-                Intent i = new Intent(Login.this, HomePage.class);
+
+                Intent i = new Intent(login.this, home.class);
                 startActivity(i);
-                this.finish();
+
             } else {
                 Toast t = Toast.makeText(this, "Wrong email or password!", Toast.LENGTH_SHORT);
                 t.show();
