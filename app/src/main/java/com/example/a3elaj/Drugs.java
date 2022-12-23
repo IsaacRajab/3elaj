@@ -1,5 +1,7 @@
 package com.example.a3elaj;
 
+import android.content.Context;
+
 public class Drugs {
     private int id;
     private String name;
@@ -7,6 +9,7 @@ public class Drugs {
     private int img;
     private String price;
     private int quantity;
+    Context contextss;
 
     public static final Drugs[] drugs = {
             new Drugs(0,"Trofeen","For head pain after food",

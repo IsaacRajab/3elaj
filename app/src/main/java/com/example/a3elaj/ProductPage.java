@@ -1,15 +1,23 @@
 package com.example.a3elaj;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ProductPage extends AppCompatActivity {
+    DrugsAdapter drugsAdapter;
+
     private ImageView pImg;
     private TextView pName;
+    private TextView pPrice;
     private TextView pDetails;
     private TextView pQuantity;
     private Button addToCart;
@@ -24,20 +32,40 @@ public class ProductPage extends AppCompatActivity {
         pImg = findViewById(R.id.pImgSingl);
         pName = findViewById(R.id.pNameSingl);
         pDetails = findViewById(R.id.pDetailsSingl);
-        pQuantity = findViewById(R.id.pQuantitySingle);
+        pQuantity = findViewById(R.id.quantity);
         addToCart = findViewById(R.id.addToCartSingle);
+        pPrice = findViewById(R.id.pPriceSingl);
+
+        String productName = "there is no Name ";
+        int productImage = 0;
+        String productPrice = "0";
+        String productDisc = " ";
+        int productQuantity = 0;
+
+        Bundle extras = getIntent().getExtras();
+        if(extras !=null){
+            productName = extras.getString("productName");
+            productImage = getIntent().getIntExtra("productImg",0);
+            productPrice = extras.getString("productPrice");
+            productDisc = extras.getString("productDisc");
+            productQuantity = extras.getInt("productQuantity");
+
+        }
+
+
+
+        pName.setText(productName);
+        pImg.setImageResource(productImage);
+        pPrice.setText(productPrice);
+        pDetails.setText(productDisc);
+        pQuantity.setText(String.valueOf(productQuantity));
+
     }
 
-    public ProductPage(ImageView pImg, TextView pNam, TextView price) {
-        this.pImg = pImg;
-        this.pName = pNam;
 
-    }
 
-    private void defin() {
 
-        //pImg = findViewById(R.id.pImgSingl);
-    }
+
 
     public ImageView getpImg() {
         return pImg;
