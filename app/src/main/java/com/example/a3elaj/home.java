@@ -8,7 +8,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class HomePage extends AppCompatActivity {
+public class home extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ArrayList<Product> recyclerDataArrayList;
     @Override

@@ -11,7 +11,7 @@ public class Drugs {
     public static final Drugs[] drugs = {
             new Drugs(0,"Trofeen","For head pain after food",
                     R.drawable.truffen,"19",5) ,
-            new Drugs(1,"Trofeen","For head pain after food",
+            new Drugs(1,"Banadol","For head pain after food",
                     R.drawable.truffen,"15",5),
             new Drugs(1,"Trofeen","For head pain after food",
                     R.drawable.truffen,"15",5),
