@@ -10,5 +10,11 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="doctor">doctor</string>
+    <string name="productname">ProductName</string>
+    <string name="price">price</string>
+    <string name="description">Description:</string>
+    <string name="descriptiontext">descriptionText</string>
+    <string name="quantity">Quantity:</string>
+    <string name="quantitynum">quantityNum</string>
 
 </resources>

@@ -55,7 +55,7 @@ public class home extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),ProductPage.class);
                 intent.putExtra("productName",drugsList.get(postion).getName());
                 intent.putExtra("productImg",drugsList.get(postion).getImg());
-                intent.putExtra("productPrice" , drugsList.get(postion).getPrice());
+                intent.putExtra("productPrice" , drugsList.get(postion).getPrice()+" ₪");
                 intent.putExtra("productDisc" , drugsList.get(postion).getDetails());
                 intent.putExtra("productQuantity" , drugsList.get(postion).getQuantity());
 
@@ -69,10 +69,13 @@ public class home extends AppCompatActivity {
     private void setDrugsData() {
         drugsList.add(new Drugs(0,"Trofeen","For head pain after food",
                 R.drawable.truffen,"19",5));
-        drugsList.add(new Drugs(0,"Banadol","For head pain after food",
-                R.drawable.truffen,"19",5));
-        drugsList.add(new Drugs(0,"Trofeen","For head pain after food",
-                R.drawable.truffen,"19",5));
+        drugsList.add(new Drugs(0,"Banadol","Panadol is a medicinal product for use in pain" +
+                " of various origins, such as headache, migraine,",
+                R.drawable.panadol,"30",10));
+        drugsList.add(new Drugs(0,"Panadol Extra","Panadol Extra Advance Tablets provides extra effective " +
+                "pain relief from headaches, period pain and the aches & pains associated with colds & flu. Contains" +
+                " Paracetamol and Caffeine.",
+                R.drawable.panadolred,"40",30));
     }
 
 
