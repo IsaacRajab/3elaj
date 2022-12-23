@@ -56,9 +56,9 @@ public class DrugsAdapter extends RecyclerView.Adapter<DrugsAdapter.ViewHolder>{
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProductPage productPage = new ProductPage(img,name,price);
-
-                productPage.getpName().setText(pName[position]);
+//                ProductPage productPage = new ProductPage(img,name,price);
+//
+//                productPage.getpName().setText(pName[position]);
                 Intent i = new Intent(v.getContext(), ProductPage.class);
                 v.getContext().startActivity(i);
 
