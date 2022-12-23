@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,6 +17,9 @@ public class login extends AppCompatActivity {
     EditText email;
     EditText password;
     Button logIn;
+    CheckBox rememberMe;
+    public static boolean bRememberMe = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,7 @@ public class login extends AppCompatActivity {
         email = findViewById(R.id.username);
         password =findViewById(R.id.password);
         logIn=findViewById(R.id.logIN);
+        rememberMe = findViewById(R.id.rememberMe);
     }
     boolean isEmail(EditText text) {
         CharSequence email = text.getText().toString();
@@ -39,8 +44,9 @@ public class login extends AppCompatActivity {
         return TextUtils.isEmpty(str);
     }
     void checkUsername() {
-        String inputEmail =email.getText().toString();
+         String inputEmail =email.getText().toString();
         String inputPass =password.getText().toString();
+
         boolean isValid = true;
         if (isEmpty(email)) {
             email.setError("You must enter username to login!");
@@ -64,10 +70,16 @@ public class login extends AppCompatActivity {
 
             if (inputEmail.equals(storedEmail) && inputPass.equals(storedPass)) {
                 //everything checked we open new activity
+                if (rememberMe.isChecked()){
+                    bRememberMe = true;
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("rememberMe",true);
+                    editor.commit();
+                }
                 Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(login.this, home.class);
                 startActivity(i);
-
+                finish();
             } else {
                 Toast t = Toast.makeText(this, "Wrong email or password!", Toast.LENGTH_SHORT);
                 t.show();

@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="#f00"
+        android:textSize="16sp"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/montserrat_semibold"
+        android:translationX="80dp"
+        android:translationY="350dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="250dp"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/Productss"
@@ -23,5 +38,8 @@
         tools:ignore="MissingConstraints"
         android:gravity="center_horizontal"
 
-    />
+    >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

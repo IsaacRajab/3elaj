@@ -18,7 +18,6 @@ public class reg extends AppCompatActivity {
     EditText email;
     EditText pass;
     Button register;
-
     boolean value=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +66,7 @@ public class reg extends AppCompatActivity {
             editor.apply();
             Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, login.class));
+            finish();
 
         }
     }
