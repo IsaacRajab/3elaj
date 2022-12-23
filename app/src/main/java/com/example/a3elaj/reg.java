@@ -1,5 +1,8 @@
 package com.example.a3elaj;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -15,8 +18,7 @@ public class reg extends AppCompatActivity {
     EditText email;
     EditText pass;
     Button register;
-    UsersData users[]=new UsersData[20];
-    int counter=0;
+
     boolean value=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,8 @@ public class reg extends AppCompatActivity {
         return TextUtils.isEmpty(str);
     }
      void checkDataEntered() {
+        String sEmail=email.getText().toString();
+        String sPass =pass.getText().toString();
         if(isEmpty(username)){
             Toast t =Toast.makeText(this,"you must Enter username to register!",Toast.LENGTH_SHORT);
             value=false;
@@ -56,14 +60,17 @@ public class reg extends AppCompatActivity {
             value=false;
         }
         if(value) {
-            users[counter] = new UsersData(toString(name), toString(email), toString(username), toString(pass));
-            counter++;
+            SharedPreferences sharedPreferences = getSharedPreferences("user_info", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(sEmail, sEmail);
+            editor.putString(sEmail+"_pass", sPass);
+            editor.apply();
+            Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, login.class));
+
         }
     }
-    public String toString(EditText s){
-        return s.getText().toString();
 
-    }
 
 
 }
