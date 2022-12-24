@@ -1,32 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home">
+    tools:context=".home"
+    android:orientation="vertical"
+    >
 
-    <Button
-        android:id="@+id/logOut"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textColor="#f00"
-        android:textSize="16sp"
-        android:background="@drawable/buttonshape"
-        android:fontFamily="@font/montserrat_semibold"
-        android:translationX="80dp"
-        android:translationY="350dp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="250dp"
-        />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+
+        >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/logonew"
+            android:layout_marginRight="8dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity=""
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Drugs"
+            android:textColor="@color/black"
+
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/goCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart"
+            android:textColor="#161053"
+            android:textSize="12sp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/montserrat_semibold"
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="250dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="@integer/material_motion_duration_long_2"
+            android:outlineSpotShadowColor="@color/black"
+            android:shadowRadius="@integer/material_motion_duration_long_2"
+            />
+
+
+    </LinearLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/Productss"
-
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:layout_gravity="center_vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -37,9 +73,23 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         android:gravity="center_horizontal"
-
+        android:layout_marginBottom="10dp"
     >
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="#f00"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/montserrat_semibold"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="250dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

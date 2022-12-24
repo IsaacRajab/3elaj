@@ -2,15 +2,20 @@ package com.example.a3elaj;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class ProductPage extends AppCompatActivity {
     DrugsAdapter drugsAdapter;
@@ -24,6 +29,14 @@ public class ProductPage extends AppCompatActivity {
     private Button buyNow;
 
 
+    String productName = "there is no Name ";
+    int productImage = 0;
+    String productPrice = "0";
+    String productDisc = " ";
+    int productQuantity = 0;
+    Cart cart;
+    ArrayList<Drugs> drugsListCart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +49,7 @@ public class ProductPage extends AppCompatActivity {
         addToCart = findViewById(R.id.addToCartSingle);
         pPrice = findViewById(R.id.pPriceSingl);
 
-        String productName = "there is no Name ";
-        int productImage = 0;
-        String productPrice = "0";
-        String productDisc = " ";
-        int productQuantity = 0;
+
 
         Bundle extras = getIntent().getExtras();
         if(extras !=null){
@@ -60,9 +69,23 @@ public class ProductPage extends AppCompatActivity {
         pDetails.setText(productDisc);
         pQuantity.setText(String.valueOf(productQuantity));
 
+
+
+        onClikeAddDrug();
+
     }
 
+    private void onClikeAddDrug() {
+        addToCart.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View v) {
+
+
+            }
+
+        });
+    }
 
 
 

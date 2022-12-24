@@ -66,7 +66,7 @@ public class DrugsAdapter extends RecyclerView.Adapter<DrugsAdapter.MyViewHolder
 
     holder.pName.setText(productName);
     holder.pImg.setImageResource(productImage);
-    holder.pPrice.setText(productPrice);
+    holder.pPrice.setText(productPrice+" ₪");
 
 
     }

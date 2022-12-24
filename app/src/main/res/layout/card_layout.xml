@@ -22,36 +22,34 @@
             android:layout_marginTop="10dp"
             android:src="@mipmap/ic_launcher" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"            >
+            >
 
             <TextView
                 android:id="@+id/productName"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/productnamecard"
                 android:textSize="19sp"
                 android:paddingLeft="8dp"
                 android:textStyle="bold"
+                android:textColor="#1B1B1B"
                 />
 
 
             <TextView
                 android:id="@+id/productPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="hlloo"
-                android:gravity="bottom"
-                android:textColor="#FFC107"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/productpricecard"
+                android:textColor="#C80000"
                 android:textSize="16sp"
                 tools:ignore="RtlCompat,RtlHardcoded"
                 android:paddingEnd="8dp"
+                android:gravity="end"
                 />
-        </LinearLayout>
+
 
 
     </LinearLayout>

@@ -22,6 +22,7 @@ public class home extends AppCompatActivity {
     private RecyclerView recyclerView;
     private DrugsAdapter.RecyclerViewClickListener listener;
     private Button logOut ;
+    private Button goCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,24 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         recyclerView = findViewById(R.id.Productss);
         logOut = findViewById(R.id.logOut);
+
         logOut.setOnClickListener(v -> logOutF());
         drugsList = new ArrayList<>();
-
+        goCart = findViewById(R.id.goCart);
         setDrugsData();
         setAdapter();
 
+        onClikeCart();
+    }
+
+    private void onClikeCart() {
+        goCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(),Cart.class);
+                startActivity(intent2);
+            }
+        });
     }
 
 
@@ -58,13 +71,15 @@ public class home extends AppCompatActivity {
                 intent.putExtra("productPrice" , drugsList.get(postion).getPrice()+" ₪");
                 intent.putExtra("productDisc" , drugsList.get(postion).getDetails());
                 intent.putExtra("productQuantity" , drugsList.get(postion).getQuantity());
-
+                intent.putExtra("productId" , drugsList.get(postion).getId());
 
 
                 startActivity(intent);
             }
         };
     }
+
+
 
     private void setDrugsData() {
         drugsList.add(new Drugs(0,"Trofeen","For head pain after food",

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">3elaj</string>
     <string name="elaj">elaj</string>
-    <string name="image1">image!</string>
+    <string name="image1">image1</string>
     <string name="image2">image2</string>
     <string name="_3eelaj">3eelaj</string>
     <string name="textview">The search for a cure for
@@ -16,6 +16,7 @@
     <string name="descriptiontext">descriptionText</string>
     <string name="quantity">Quantity:</string>
     <string name="quantitynum">quantityNum</string>
-    <string name="splashlogo">splashLogo</string>
+    <string name="productpricecard">productpricecard</string>
+    <string name="productnamecard">productnamecard</string>
 
 </resources>
