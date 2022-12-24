@@ -74,10 +74,10 @@ public class login extends AppCompatActivity {
                     bRememberMe = true;
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean("rememberMe",true);
-                    editor.commit();
+                    editor.apply();
                 }
                 Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(login.this, home.class);
+                Intent i = new Intent(login.this, SplashActivity.class);
                 startActivity(i);
                 finish();
             } else {
