@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -35,7 +36,7 @@ public class ProductPage extends AppCompatActivity {
     String productDisc = " ";
     int productQuantity = 0;
     Cart cart;
-    ArrayList<Drugs> drugsListCart;
+    static ArrayList<Drugs> drugsListCart = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,13 +78,22 @@ public class ProductPage extends AppCompatActivity {
 
     private void onClikeAddDrug() {
         addToCart.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+                // get the quantity of the product
+                int quantity = Integer.parseInt(pQuantity.getText().toString());
 
+                // create a new drug object with the data from the Product Page
+                Drugs drug = new Drugs(0, productName, productDisc, productImage, productPrice, quantity);
 
+                // add the drug to the list of drugs in the cart
+                if (drugsListCart != null) {
+                    drugsListCart.add(drug);
+                }
+
+                // show a toast message to confirm that the product has been added to the cart
+                Toast.makeText(ProductPage.this, productName + " added to cart", Toast.LENGTH_SHORT).show();
             }
-
         });
     }
 

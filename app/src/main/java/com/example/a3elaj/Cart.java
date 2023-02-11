@@ -14,9 +14,7 @@ import java.util.ArrayList;
 
 public class Cart extends AppCompatActivity {
 
-
-
-     ArrayList<Drugs> drugsListCart;
+    ArrayList<Drugs> drugsListCart;
     private RecyclerView recyclerView;
     private DrugsAdapter.RecyclerViewClickListener listener;
 
@@ -35,7 +33,7 @@ public class Cart extends AppCompatActivity {
     private void setAdapter() {
         setOnClikListner();
 
-        DrugsAdapter adapter = new DrugsAdapter(drugsListCart,listener);
+        DrugsAdapter adapter = new DrugsAdapter(ProductPage.drugsListCart,listener);
         RecyclerView.LayoutManager layoutManager  = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -46,7 +44,7 @@ public class Cart extends AppCompatActivity {
         listener = new DrugsAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View v, int postion) {
-                drugsListCart.remove(0);
+                ProductPage.drugsListCart.remove(0);
             }
         };
     }
