@@ -18,5 +18,18 @@
     <string name="quantitynum">quantityNum</string>
     <string name="productpricecard">productpricecard</string>
     <string name="productnamecard">productnamecard</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="info_3elaaj_com">info@3elaaj.com</string>
+    <string name="email">Email:</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="ramallah_rukab_street">Ramallah - Rukab Street</string>
+    <string name="location">Location:</string>
+    <string name="_0568124568">0568124568</string>
+    <string name="type_of_feedback">Type of Feedback</string>
+    <string name="massage">massage</string>
+    <string-array name="Feedback">
+        <item>technical support</item>
+        <item>customer services</item>
+    </string-array>
 
 </resources>

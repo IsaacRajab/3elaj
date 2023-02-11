@@ -16,7 +16,7 @@
         android:layout_marginTop="20pt"
         android:layout_marginBottom="25pt"
         android:fontFamily="@font/montserrat"
-        android:text="Contact Us"
+        android:text="@string/contact_us"
         android:textColor="@color/black"
         android:textSize="18pt"
         android:textStyle="bold" />
@@ -26,10 +26,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="2pt"
-        android:layout_marginLeft="8pt"
+        android:layout_marginStart="8pt"
         android:layout_marginBottom="3pt"
         android:fontFamily="@font/montserrat"
-        android:text="Email:"
+        android:text="@string/email"
         android:textColor="@color/black"
         android:textSize="7pt"
         android:textStyle="bold"/>
@@ -39,60 +39,117 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="2pt"
-        android:text="info@3elaaj.com"
-        android:layout_marginLeft="8pt"
+        android:text="@string/info_3elaaj_com"
+        android:layout_marginStart="8pt"
         android:layout_marginBottom="10pt"
         android:textColor="@color/black"
         />
 
-    <TextView
-        android:id="@+id/cUPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="2pt"
-        android:text="Phone Number:"
-        android:layout_marginLeft="8pt"
-        android:layout_marginBottom="3pt"
-        android:fontFamily="@font/montserrat"
-        android:textSize="7pt"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cUPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8pt"
+                android:layout_marginBottom="3pt"
+                android:fontFamily="@font/montserrat"
+                android:padding="2pt"
+                android:text="@string/phone_number"
+                android:textColor="@color/black"
+                android:textSize="7pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cULocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8pt"
+                android:layout_marginBottom="3pt"
+                android:fontFamily="@font/montserrat"
+                android:padding="2pt"
+                android:text="@string/location"
+                android:textColor="@color/black"
+                android:textSize="7pt"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cUPhoneValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8pt"
+
+                android:layout_marginBottom="10pt"
+                android:fontFamily="@font/montserrat"
+                android:padding="2pt"
+                android:text="@string/_0568124568"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/cULocationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8pt"
+                android:layout_marginBottom="10pt"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/ramallah_rukab_street"
+                android:textColor="@color/black" />
+
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
-        android:id="@+id/cUPhoneValue"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_horizontal"
+        android:text="@string/type_of_feedback"
+        android:textColor="#2B8AD5"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textAlignment="gravity"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:entries="@array/Feedback"/>
+
+    <EditText
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/massage"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="2pt"
-
-        android:text="0568124568"
-        android:fontFamily="@font/montserrat"
-        android:layout_marginLeft="8pt"
-        android:layout_marginBottom="10pt"
-        android:textColor="@color/black"
-        />
-
-    <TextView
-        android:id="@+id/cULocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="2pt"
-        android:layout_marginLeft="8pt"
-        android:layout_marginBottom="3pt"
-        android:fontFamily="@font/montserrat"
-        android:text="Location:"
-        android:textColor="@color/black"
-        android:textSize="7pt"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/cULocationValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ramallah - Rukab Street"
-        android:fontFamily="@font/montserrat"
-        android:layout_marginLeft="8pt"
-        android:layout_marginBottom="10pt"
-        android:textColor="@color/black"/>
+        android:layout_gravity="end"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40px"
+        android:text="Send Feedback"
+        android:textColor="#BD6A6A" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
