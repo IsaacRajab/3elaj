@@ -6,21 +6,22 @@
     android:layout_height="140dp"
     android:layout_gravity="center"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#DAFFF9"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="15dp"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="10dp"
 
         >
 
         <ImageView
-            android:id="@+id/productImg"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:id="@+id/drugImgCard"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginHorizontal="10dp"
             android:src="@drawable/logo" />
@@ -29,10 +30,15 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="27dp"
+            android:layout_gravity="center"
             >
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                >
             <TextView
-                android:id="@+id/productName"
+                android:id="@+id/drugNameCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/productnamecard"
@@ -43,7 +49,7 @@
                 />
 
             <TextView
-                android:id="@+id/shortDiscription"
+                android:id="@+id/drugDescriptionCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Short Discription"
@@ -52,9 +58,10 @@
                 android:paddingLeft="8dp"
                 android:textColor="#1B1B1B"
                 />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/productPrice"
+                android:id="@+id/drugPriceCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
@@ -77,13 +84,13 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:textColor="#404040"
-                app:backgroundTint="#FFFFFF"
+                app:backgroundTint="#DAFFF9"
                 android:background="@drawable/radis"
                 android:text="+"
 
                 />
             <TextView
-                android:id="@+id/quantityCartCard"
+                android:id="@+id/drugQuantityCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
@@ -98,7 +105,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:textColor="#686868"
-                app:backgroundTint="#FFFFFF"
+                app:backgroundTint="#DAFFF9"
                 android:background="@drawable/radis"
                 android:text="+"
 

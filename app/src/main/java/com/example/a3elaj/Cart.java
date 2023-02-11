@@ -3,6 +3,7 @@ package com.example.a3elaj;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -31,23 +32,13 @@ public class Cart extends AppCompatActivity {
     }
 
     private void setAdapter() {
-        setOnClikListner();
 
-        DrugsAdapter adapter = new DrugsAdapter(ProductPage.drugsListCart,listener);
-        RecyclerView.LayoutManager layoutManager  = new GridLayoutManager(this,2);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        CartAdapter adapter = new CartAdapter(this,ProductPage.drugsListCart);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
     }
 
-    private void setOnClikListner() {
-        listener = new DrugsAdapter.RecyclerViewClickListener() {
-            @Override
-            public void onClick(View v, int postion) {
-                ProductPage.drugsListCart.remove(0);
-            }
-        };
-    }
+
 
 
 

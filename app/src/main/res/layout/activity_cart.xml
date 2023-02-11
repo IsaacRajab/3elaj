@@ -8,6 +8,7 @@
     tools:context=".Cart"
     android:orientation="vertical"
     android:paddingHorizontal="15dp"
+    android:background="#E9EFED"
     >
 
     <LinearLayout
