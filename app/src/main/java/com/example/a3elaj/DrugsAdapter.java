@@ -79,4 +79,13 @@ public class DrugsAdapter extends RecyclerView.Adapter<DrugsAdapter.MyViewHolder
     public interface RecyclerViewClickListener{
         void onClick(View v, int postion);
     }
+
+    public void filterList(ArrayList<Drugs> filterlist) {
+        // below line is to add our filtered
+        // list in our course array list.
+        drugsList = filterlist;
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged();
+    }
 }
