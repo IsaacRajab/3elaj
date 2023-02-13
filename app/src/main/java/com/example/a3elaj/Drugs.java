@@ -6,27 +6,14 @@ public class Drugs {
     private int id;
     private String name;
     private String details;
+    private String cat;
     private int img;
     private String price;
     private int quantity;
     Context contextss;
 
-    public static final Drugs[] drugs = {
-            new Drugs(0,"Trofeen","For head pain after food",
-                    R.drawable.truffen,"19",5) ,
-            new Drugs(1,"Banadol","For head pain after food",
-                    R.drawable.truffen,"15",5),
-            new Drugs(1,"Trofeen","For head pain after food",
-                    R.drawable.truffen,"15",5),
-            new Drugs(1,"Trofeen","For head pain after food",
-                    R.drawable.truffen,"15",5),
-            new Drugs(1,"Trofeen","For head pain after food",
-                    R.drawable.truffen,"15",5),
-            new Drugs(1,"Trofeen","For head pain after food",
-                    R.drawable.truffen,"15",5)
-    };
 
-    public Drugs(int id, String name, String details, int img, String price, int quantity) {
+    public Drugs(int id, String name, String details,String cat, int img, String price, int quantity) {
         this.id = id;
         this.name = name;
         this.details = details;

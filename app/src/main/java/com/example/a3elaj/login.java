@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.service.autofill.UserData;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -13,21 +16,41 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class login extends AppCompatActivity {
     EditText email;
     EditText password;
     Button logIn;
     CheckBox rememberMe;
+    private RequestQueue queue;
     public static boolean bRememberMe = false;
-
-
+    ArrayList<String> todos = new ArrayList<>();
+    ArrayList<UserData> users;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupIU();
+        queue = Volley.newRequestQueue(this);
         logIn.setOnClickListener(v -> checkUsername());
+
     }
+
+
+
+
     private void setupIU(){
         email = findViewById(R.id.username);
         password =findViewById(R.id.password);
@@ -63,6 +86,8 @@ public class login extends AppCompatActivity {
             isValid = false;
         }
 
+
+
         if (isValid) {
             SharedPreferences sharedPreferences = getSharedPreferences("user_info", Context.MODE_PRIVATE);
             String storedEmail = sharedPreferences.getString(inputEmail, "");
@@ -85,5 +110,9 @@ public class login extends AppCompatActivity {
                 t.show();
             }
         }
+
+
+
     }
+
 }

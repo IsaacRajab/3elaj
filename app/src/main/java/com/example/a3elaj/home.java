@@ -90,14 +90,14 @@ public class home extends AppCompatActivity {
 
 
     private void setDrugsData() {
-        drugsList.add(new Drugs(0,"Trofeen","For head pain after food",
+        drugsList.add(new Drugs(0,"Trofeen","For head pain after food","HeadPain",
                 R.drawable.truffen,"19",5));
         drugsList.add(new Drugs(0,"Banadol","Panadol is a medicinal product for use in pain" +
-                " of various origins, such as headache, migraine,",
+                " of various origins, such as headache, migraine,","infections",
                 R.drawable.panadol,"30",10));
         drugsList.add(new Drugs(0,"Panadol Extra","Panadol Extra Advance Tablets provides extra effective " +
                 "pain relief from headaches, period pain and the aches & pains associated with colds & flu. Contains" +
-                " Paracetamol and Caffeine.",
+                " Paracetamol and Caffeine.","antibiotics",
                 R.drawable.panadolred,"40",30));
     }
 

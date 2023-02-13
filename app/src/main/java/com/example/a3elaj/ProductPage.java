@@ -84,7 +84,7 @@ public class ProductPage extends AppCompatActivity {
                 int quantity = Integer.parseInt(pQuantity.getText().toString());
 
                 // create a new drug object with the data from the Product Page
-                Drugs drug = new Drugs(0, productName, productDisc, productImage, productPrice, quantity);
+                Drugs drug = new Drugs(0, productName, productDisc,"", productImage, productPrice, quantity);
 
                 // add the drug to the list of drugs in the cart
                 if (drugsListCart != null) {
