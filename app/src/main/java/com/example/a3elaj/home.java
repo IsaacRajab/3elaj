@@ -43,7 +43,7 @@ public class home extends AppCompatActivity {
         drugsList = new ArrayList<>();
         goCart = findViewById(R.id.goCart);
         setDrugsData();
-        setAdapter();
+        setAdapter(drugsList);
 
         onClikeCart();
     }
@@ -59,17 +59,19 @@ public class home extends AppCompatActivity {
     }
 
 
-    private void setAdapter() {
-        setOnClikListner();
+    private void setAdapter(ArrayList<Drugs> drugsList) {
+        setOnClikListner(drugsList);
 
          adapter = new DrugsAdapter(drugsList,listener);
         RecyclerView.LayoutManager layoutManager  = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setHasFixedSize(true);
+
         recyclerView.setAdapter(adapter);
     }
 
-    private void setOnClikListner() {
+    private void setOnClikListner(ArrayList<Drugs> drugsList) {
         listener = new DrugsAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View v, int postion) {
@@ -81,7 +83,7 @@ public class home extends AppCompatActivity {
                 intent.putExtra("productQuantity" , drugsList.get(postion).getQuantity());
                 intent.putExtra("productId" , drugsList.get(postion).getId());
 
-
+                System.out.println("aaa: "+postion);
                 startActivity(intent);
             }
         };
@@ -175,7 +177,9 @@ public class home extends AppCompatActivity {
         } else {
             // at last we are passing that filtered
             // list to our adapter class.
-            adapter.filterList(filteredlist);
+//            adapter.filterList(filteredlist);
+            setAdapter(filteredlist);
+
         }
     }
 }
